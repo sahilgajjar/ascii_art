@@ -139,16 +139,15 @@ void animation()
 void main()
 {
     int i = 0;
-    int j = 0;
+    int j;
+
     printf("\033[?25l"); // hide the cursor
-                         
-    while(j < 5)    
+
+    for(j = 0; j < 5; j++)
     {
         animation_open_close(i);
         i = i + 3;
-        j++;
     }
 
     printf("\033[?25h"); // show the cursor
 }
-
